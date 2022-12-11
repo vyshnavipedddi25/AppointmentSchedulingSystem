@@ -1,0 +1,51 @@
+<body>
+    <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">Surkhet, NP12</div>
+            <div class="text-two">Birendranagar 06</div>
+          </div>
+          <div class="phone details">
+
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+0098 9893 5647</div>
+            <div class="text-two">+0096 3434 5678</div>
+          </div>
+          <div class="email details">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">codinglab@gmail.com</div>
+            <div class="text-two">info.codinglab@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Send us a message</div>
+          <p>If you like some specific information about the services we provide, or just have a question for us.<br>
+        Please fill up the Form given below and we will get back to you.</p>
+        <form #form="ngForm" autocomplete="off" class="form bt1  p-3 mb-3 rounded-3 mat-card">
+
+          <div class="">
+            <input name="CName" type="text" class="form-control text-white  ps-3 p-2 mb-2"  id="CName" #Name="ngModel" [(ngModel)]="objCon.conData.CName" placeholder="Enter your name">
+          </div>
+          <div class="">
+            <input name="CEmail" type="text" class="form-control  text-white ps-3 p-2" id="CEmail" #Name="ngModel" [(ngModel)]="objCon.conData.CEmail" placeholder="Enter your Email">
+          </div>
+          <div class="message-box row ps-3 p-2">
+            <input type="textarea" name="CMessage" class="form-control text-white " id="CMessage" #Name="ngModel" [(ngModel)]="objCon.conData.CMessage" placeholder="Enter your message">
+          </div>
+          <div class="col-3 p-3 offset-4">
+            <div class="d-grid">
+              <button type="submit" class="btn  mb-4 btn-floating btn-primary text-white rounded-5" (click)="onSubmit(form)">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- <button type="submit" class="btn  mb-4 btn-floating btn-primary text-white rounded-5" (click)="onSubmit(form)">Submit</button> -->

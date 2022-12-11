@@ -1,0 +1,23 @@
+.navbar{
+    background: #4a05b8;
+    position: fixed;
+    width: 100vw;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family:'Trebuchet MS';
+
+    
+}
+.nav-link{
+    font-weight: bolder;
+}
+
+
+.nav1{
+    margin-right: 15px;
+}
+
+.btn{
+    background: #4a05b8;
+    color: #00C9B8;
+}

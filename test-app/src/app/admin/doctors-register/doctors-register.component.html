@@ -1,0 +1,35 @@
+<body class="b1">
+    <div class="">
+      <div class="container">
+      <form #form="ngForm" autocomplete="off"  class="form bt1  p-3 mb-3 rounded-3 mat-card">
+        <input type="hidden" name="Did" [value]="objdoc.docData.Did">
+        <div class="row g-0">
+          <div class="col text-center p-2 mb-3 rounded-3 bg-info">
+            <span class="fs-3">Doctors Registration</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="DName" type="text" class="form-control text-white" id="DName" #DName="ngModel" [(ngModel)]="objdoc.docData.DName" placeholder="Name"
+            minlength="3" maxlength="25" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="DSpecialization" type="text" class="form-control text-white" id="DSpecialization" #DSpecialization="ngModel" [(ngModel)]="objdoc.docData.DSpecialization" placeholder="Specilization"
+            minlength="5" maxlength="25" required/>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-4 offset-4">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary rounded-5" (click)="onSubmit(form)">Submit</button>
+            </div>
+        </div>
+        </div>
+  
+      </form>
+    </div>
+    </div>
+  </body>

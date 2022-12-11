@@ -1,0 +1,97 @@
+<body class="b1">
+    <div class="">
+      <div class="container">
+        <form #form="ngForm" autocomplete="off"  class="form bt1  p-3 mb-3 rounded-3 mat-card">
+          <input type="hidden" name="Id" [value]="objservice.ppData.Id">
+          <div class="row g-0">
+            <div class="head1 col text-center p-2 mb-3 rounded-3 bg-info ">
+              <span class="fs-3">Appointment Details</span>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col form-group mb-3">
+              <label for="FNAme" class="form-label">First Name</label>
+              <input name="FName" type="text" class="form-control text-white" id="FName" #FName="ngModel" [(ngModel)]="objservice.ppData.FName"
+              minlength="3" maxlength="10" required/>
+            </div>
+            <div class="col mb-3">
+              <label for="LName" class="form-label">Last Name</label>
+              <input name="LName" type="text" class="form-control text-white" id="LName" #LName="ngModel" [(ngModel)]="objservice.ppData.LName"
+              minlength="3" maxlength="10" required/>
+            </div>
+            
+            <div class="col mb-3 ">
+              <label for="Date " class="form-label">Date</label>&nbsp;
+              <i class="fa fa-calendar " aria-hidden="true"></i>
+              <input  name="Date" type="date" class="form-control text-white" id="Date" #Date="ngModel" [(ngModel)]="objservice.ppData.Date" required/>
+              <div class="form-text"></div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+              <label for="Email" class="form-label">Email ID</label>&nbsp;
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <input name="Email" type="email" class="form-control text-white" id="Email" #Email="ngModel" [(ngModel)]="objservice.ppData.Email"
+              minlength="5" maxlength="20" required/>
+              <div class="form-text"></div>
+          </div>
+          <div class="col ">
+            <label for="time" class="form-label">Time</label>&nbsp;
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <input  name="Time" type="time" class="form-control text-white" id="Time" #Time="ngModel" [(ngModel)]="objservice.ppData.Time" required/>
+              <div class="form-text"></div>
+            <div class="form-text"></div>
+            
+  
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="Mobile" class="form-label">Mobile No.</label>&nbsp;
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <input name="Mobile" type="text" class="form-control text-white" id="Mobile" #Mobile="ngModel" [(ngModel)]="objservice.ppData.Mobile"/>
+          <div class="form-text"></div>
+      </div>
+      <div class="col box mb-3 ps-5">
+        <label for="Doctor" class="form-label">Doctor</label>&nbsp;
+        
+        <select id="Doctor" name="Doctor" class="text-white browser-default custom-select" #Doctor="ngModel" [(ngModel)]="objservice.ppData.Doctor" required>
+          <option selected>Select a Doctor</option>
+          
+                <option value="General Physician" >General Physician</option>
+                <option value="Cardiologist" >Cardiologist</option>
+                <option value="Dentist" >Dentist</option>
+                <option value="Neurologist" >Neurologist</option>
+                <option value="Gynaecologist" >Gynaecologist</option>
+                <option value="ENT Specialist" >ENT Specialist</option>
+        </select>
+        
+    </div>   
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+            <label for="Confirm" class="form-label">Confirmation By</label>&nbsp;
+        <i class="fa fa-check" aria-hidden="true"></i><br>
+        <!-- <input name="Confirm" type="text" class="form-control" id="Confirm" #Confirm="ngModel" [(ngModel)]="objservice.ppData.Confirm"/> -->
+        <input name="confirm" type="radio" class="form-check-input p-2 mb-5" id="Confirm" value="Email" #Confirm="ngModel" [(ngModel)]="objservice.ppData.Confirm"/>&nbsp;
+        <label class="form-check-label" for="confirm1">Email</label>&nbsp;&nbsp;&nbsp;
+        <input name="confirm" type="radio" class="form-check-input p-2 mb-5" id="Confirm" value="Phone" #Confirm="ngModel" [(ngModel)]="objservice.ppData.Confirm"/>&nbsp;
+        <label class="form-check-label"for="confirm1">Phone</label>
+        <div class="form-text"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 offset-4">
+          <div class="d-grid">
+              <button type="submit" class="btn btn-primary rounded-5" (click)="onSubmit(form)">Submit</button>
+          </div>
+      </div>
+      </div>
+      
+        
+  
+        </form>
+      </div>
+    </div>
+  </body>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="appointmentschedulingsys" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\DELL\\Desktop\\Angular\\AppointmentSchedulingv1\.0\\AppointmentSchedulingv1\.0\\AppSchedule2911\\AppSchedule2911\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

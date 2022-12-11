@@ -1,0 +1,42 @@
+<body>
+    <div class="container">
+        <div class="row g-o">
+                <div class="row g-0">
+                  <div class="col  text-center p-2 mb-3 rounded-3 bg-info" style="text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+                    <span class="fs-3">Cancellation</span>
+                  </div>
+                </div>
+            <div class="col">
+                <table class="table table-hover text-white">
+                    <thead class="thead text-info" style="font-weight: 1;">
+                        <tr>
+                            <th>Id</th>
+                            <th>FirstName</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Doctor</th>
+                            <th>Confirm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of objCan.ccList">
+                            <td>{{p.Id}}</td>
+                            <td>{{p.FName}}</td>
+                            <td>{{p.LName}}</td>
+                            <td>{{p.Email}}</td>
+                            <td>{{p.Mobile}}</td>
+                            <td>{{p.Date|date:'shortDate'}}</td>
+                            
+                            <td>{{p.Time}}</td>
+                            <td>{{p.Doctor}}</td>
+                            <td>{{p.Confirm}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+</body>

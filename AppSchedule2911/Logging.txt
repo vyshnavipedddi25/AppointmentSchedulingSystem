@@ -1,0 +1,64 @@
+var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build(); //Read Configuration from appsettings
+            Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(config).CreateLogger(); //Initialize Logger
+
+            try
+            {
+                Log.Information("Our Web API Started!!!");
+                CreateHostBuilder(args).Build().Run();
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "The Application failed to Start!!!");
+            }
+            finally { Log.CloseAndFlush(); }
+
+"Serilog": {
+    "Using": [],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Serilogs\\AppLogs.log.txt",
+          "outputTemplate": "{Timestamp} {Message}{NewLine:1}{Exception:1}"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Serilogs\\AppLogs.json",
+          "formatter": "Serilog.Formatting.Json.JsonFormatter, Serilog"
+        }
+      },
+	{
+        "Name": "MSSqlServer",
+        "Args": {
+          "connectionString": "Server=(localdb)\\mssqllocaldb;Database=WebApplication1Db07122;Trusted_Connection=True;MultipleActiveResultSets=true",
+          "sinkOptionsSection": {
+            "tableName": "Logs",
+            "schemaName": "EventLogging",
+            "autoCreateSqlTable": true
+          },
+          "restrictedToMinimumLevel": "Warning"
+        }
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithProcessId",
+      "WithThreadId"
+    ],
+    "Properties": {
+      "ApplicationName": "Serilog.WebApplication"
+    }
+  }

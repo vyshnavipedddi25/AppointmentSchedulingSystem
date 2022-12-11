@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    
+    background-image: url("/assets/home2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+form{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.green-icon{
+    color: lightgreen;
+}
+
+.blue-icon{
+    color:darkblue
+}
+
+.red-icon{
+    color: red;
+}
+
+input.ng-touched.ng-invalid{
+    border-color: darkred;
+}
+
+input.ng.valid{
+    border-color: darkgreen;
+}
+
+.green-circle{
+    color: darkgreen;
+}

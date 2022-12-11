@@ -1,0 +1,26 @@
+CREATE TRIGGER trDeleteAppointment
+ON Appointment
+FOR DELETE
+AS
+BEGIN
+    DECLARE @Id int;
+    DECLARE @FName nvarchar(max);
+    DECLARE @LName nvarchar(max);
+    DECLARE @Email nvarchar(max);
+    DECLARE @Mobile nvarchar(10);
+    DECLARE @Date datetime2;
+    DECLARE @Time nvarchar(max);
+    DECLARE @Doctor nvarchar(max);
+    DECLARE @Confirm nvarchar(max);
+    SELECT @Id = Id from deleted
+    SELECT @FName = FName from deleted
+    SELECT @LName = LName from deleted
+    SELECT @Email = Email from deleted
+    SELECT @Mobile = Mobile from deleted
+    SELECT @Date = Date from deleted
+    SELECT @Time = Time from deleted
+    SELECT @Doctor = Doctor from deleted
+    SELECT @Confirm = Confirm from deleted
+    INSERt INTO Cancel(Id,FName,LName,Email,Mobile,Date,Time,Doctor,Confirm) VALUES(@Id,@FName,@LName,@Email,@Mobile,@Date,@Time,@Doctor,@Confirm)
+    print 'Cancelled and Inserted'
+END

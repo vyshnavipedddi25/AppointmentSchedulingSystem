@@ -1,0 +1,22 @@
+form{
+    width: 700px;
+    color: white;
+}
+
+
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    background:transparent;
+    background-color: transparent;
+    color:transparent
+}
+::placeholder{
+    color: white;
+}

@@ -1,0 +1,56 @@
+<body class="b1">
+    <div class="">
+      <div class="container">
+      <form #form="ngForm" autocomplete="off"  class="form bt1  p-3 mb-3 rounded-3 mat-card">
+        <input type="hidden" name="Uid" [value]="objs1.regData.Uid">
+        <div class="row g-0">
+          <div class="col text-center p-2 mb-3 rounded-3 bg-info">
+            <span class="fs-3">Registration</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="Name" type="text" class="form-control text-white" id="Name" #Name="ngModel" [(ngModel)]="objs1.regData.Name" placeholder="Name"
+            minlength="3" maxlength="25" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="UserName" type="text" class="form-control text-white" id="UserName" #UserName="ngModel" [(ngModel)]="objs1.regData.UserName" placeholder="Username"
+            minlength="5" maxlength="10" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="Password" type="password" class="form-control text-white" id="Password" #Password="ngModel" [(ngModel)]="objs1.regData.Password" placeholder="Password"
+            minlength="6" maxlength="10" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <input name="Email" type="email" class="form-control text-white" id="Email" #Email="ngModel" [(ngModel)]="objs1.regData.Email" placeholder="Email" minlength="5" maxlength="20" required/>
+          </div>
+          <div class="col form-group mb-3">
+            
+            <input name="Phone" type="text" class="form-control text-white" id="Phone" #Phone="ngModel" [(ngModel)]="objs1.regData.Phone" placeholder="Mobile No."
+            minlength="10" maxlength="10" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group mb-3">
+            <label for="DOB">Date of Birth </label>
+            <input name="DOB" type="date" class="form-control textbox-n text-white"  id="DOB" #DOB="ngModel" [(ngModel)]="objs1.regData.DOB" placeholder="Date of Birth" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 offset-4">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary rounded-5" (click)="onSubmit(form)">Submit</button>
+            </div>
+        </div>
+        </div>
+  
+      </form>
+    </div>
+    </div>
+  </body>

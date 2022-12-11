@@ -1,0 +1,40 @@
+<body class="b1">
+    <div class="">
+      <div class="container">
+        <form [formGroup]="loginForm" class="form  p-3 mb-3 rounded-3 hover-shadow " >
+          <div class="row g-0">
+            <div class="col  text-center p-2 mb-3 rounded-3 bg-info " style=" text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+              <span class="fs-3">Login</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col form-group mb-3">
+              
+              <input type="text" class="form-control text-white" id="UserName" placeholder=Username
+              formControlName="UserName" minlength="5" maxlength="10" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col form-group mb-3">
+              
+              <input type="password" class="form-control text-white" id="Password" placeholder="Password"
+              formControlName="Password" minlength="5" maxlength="10" required >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5 offset-4">
+              <div class="d-grid">
+                <button type="submit" class="btn  mb-4 btn-floating btn-primary  text-white rounded-5" (click)="onLogin()"><i class="fa fa-sign-in"> </i>  Log In</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center text-white">
+              <p>Not a member? <a routerLink="/user/registeruser">Register</a></p>
+            </div>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </body>

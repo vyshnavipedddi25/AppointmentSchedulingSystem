@@ -1,0 +1,80 @@
+<body>
+    <div class="container">
+        
+        <div class="row g-0">
+            
+                <div class="row g-0">
+                  <div class="col  text-center p-2 mb-3 rounded-3 bg-info" style="text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+                    <span class="fs-3">Appointment</span>
+                  </div>
+                </div>
+            <div class="col">
+            <table class="table table-hover text-white">
+                <thead class="thead text-info" style="font-weight: 1;">
+                    <tr>
+                        <th>Id</th>
+                        <th>FirstName</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Doctor</th>
+                        <th>Confirm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of objSrv.ppList | filter:UserId">
+                        <td (click)="fillJForm(p)">{{p.Id}}</td>
+                        <td (click)="fillJForm(p)">{{p.FName}}</td>
+                        <td (click)="fillJForm(p)">{{p.LName}}</td>
+                        <td (click)="fillJForm(p)">{{p.Email}}</td>
+                        <td (click)="fillJForm(p)">{{p.Mobile}}</td>
+                        <td (click)="fillJForm(p)">{{p.Date|date:'shortDate'}}</td>
+                        
+                        <td (click)="fillJForm(p)">{{p.Time}}</td>
+                        <td (click)="fillJForm(p)">{{p.Doctor}}</td>
+                        <td (click)="fillJForm(p)">{{p.Confirm}}</td>
+                       
+                        <td>
+                            <button type="button" class="btn btn-danger rounded-5" (click)="del(p.Id)">
+                                <i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+            <form #form="ngForm"(submit)="upDaterecord(form)" class="ps-3">
+                <input type="hidden" name="Id" [value]="objSrv.ppData.Id">
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="Date" class="form-label fs-5">Date</label>&nbsp;
+                    <i class="fa fa-calendar fs-5" aria-hidden="true"></i>
+                    <input  name="Date" type="date" class="form-control" id="Date" #Date="ngModel" [(ngModel)]="objSrv.ppData.Date"/>
+                    <div class="form-text"></div>
+                </div>
+                <div class="col mb-3 ps-3">
+                    
+                    <label for="Time" class="form-label fs-5">Time</label>&nbsp;
+                    <i class="fa fa-clock-o fs-5" aria-hidden="true"></i>
+                    <input  name="Time" type="time" class="form-control ps-3" id="Time" #Time="ngModel" [(ngModel)]="objSrv.ppData.Time"/>
+                    <div class="form-text"></div>       
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4 offset-4">
+                  <div class="d-grid">
+                      <button type="submit" class="btn btn-primary rounded-5" (click)="upDaterecord(form)">
+                        <i class="fa fa-clock-o"></i>  Reschedule</button>
+                  </div>
+              </div>
+              </div>
+              <div class="row"><br></div>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>

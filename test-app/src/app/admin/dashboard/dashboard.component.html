@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark  ">
+    <!-- navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-dark -->
+      <div class="container-fluid">
+        <a class="navbar-brand" ><img src="./assets/logo.png" alt="Appointment Scheduling System"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  " id="navbarNav">
+          <ul class="navbar-nav ms-auto ">
+            <!-- <li class="nav-item nav1">
+              <a class="nav-link" routerLink="adminbookappointment">Book Appointment</a>
+            </li> -->
+            <li class="nav-item nav1">
+              <a class="nav-link fs-5" style="color: #00C9B8;" aria-current="page" routerLink="scheduledisplay"><i class="fa fa-calendar-check-o"></i> Appointments</a>
+            </li>
+            <li class="nav-item nav1">
+                <a class="nav-link fs-5" style="color: #00C9B8;" routerLink="canceldisplay"><i class="fa fa-calendar-minus-o"></i> Cancellations</a>
+              </li>
+              <li class="nav-item nav1">
+                <a class="nav-link fs-5" style="color: #00C9B8;" routerLink="feedbackdisplay"><i class="fa fa-comments-o"></i> Feedbacks</a>
+              </li>
+              <li class="nav-item nav1">
+                <a class="nav-link fs-5" style="color: #00C9B8;" routerLink="doctors"><i class="fa fa-user-md"></i> Doctors</a>
+              </li>
+              <li class="nav-item nav1">
+                <a class="nav-link fs-5" style="color: #00C9B8;"  routerLink="doctorsdisplay"><i class="fa fa-list"></i> Doctors List</a>
+              </li>
+            
+            
+            <!-- <li class="nav-item nav1">
+              <a class="nav-link" routerLink="registeruser">Register</a>
+            </li> -->
+            
+            
+            <li class="nav-item nav1">
+              <button type="submit" class="btn   btn-floating fs-5 ps-1" (click)="onLogOut()"><i class="fa fa-sign-out"> </i>  Log Out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>

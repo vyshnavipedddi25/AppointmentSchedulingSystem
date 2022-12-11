@@ -1,0 +1,85 @@
+form{
+    width: 700px;
+    color: white;
+}
+
+body{
+    /* background-image: url("/assets/home2.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    background:transparent;
+    background-color: transparent;
+    color:transparent
+}
+::placeholder{
+    color: white;
+}
+
+.btn-default,
+
+.btn-default:visited {
+
+    margin-top: 50px;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    border: none;
+
+    font-size: .9em;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    background-color: #6ec4f7;
+
+    transition: background-color 0.1s;
+
+}
+
+option{
+    color: white;
+}
+  
+  .box select {
+    background-color:transparent;
+    
+    padding: 12px;
+    width: 250px;
+    border:  white;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: white;
+    color: white;
+  }
+  
+ 
+  
+  .box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .box select option {
+    padding: 30px;
+    background-color: rgb(87, 191, 255);
+    color: white;
+  }
+
+
+  
